@@ -13,6 +13,7 @@ function startTest() {
     var button = document.getElementById("btn");
     button.innerHTML = "End Test";
     button.onclick = endTest;
+
 }
 
 function endTest(){
@@ -38,6 +39,7 @@ if (timeElapsed !== 0 && !isNaN(typedWords)) {
 //Display the results
 var outputDiv = document.getElementById("output");
 outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" + 
+"<p>Total Length: " + userTypedText.length + "</p>" +
 "<p>Words Typed: " + typedWords + "</p>" +
 "<p>Time Elapsed: " + timeElapsed.toFixed(2) + " seconds</p>" +
 "<p>Words Per Minute (WPM): " + wpm + "</p>";
@@ -47,4 +49,6 @@ outputDiv.innerHTML = "<h2>Typing Test Results:</h2>" +
 var button = document.getElementById("btn");
 button.innerHTML = "Start Test";
 button.onclick = startTest;
+document.getElementById('userInput').value ="";
+
 }
