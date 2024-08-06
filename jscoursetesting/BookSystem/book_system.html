@@ -15,10 +15,14 @@
         <label for="pagesNumber">No. of Page Time</label><br>
         <input type="number" id="pagesNumber"><br><br>
         <button onclick="addBook()">Add Book</button>
+    
 
         <h2>Books</h2>
         <div id="books">
             <!-- books will be displayed here-->
+        </div>
+        <div id="deleteBtn"  style="display: none;">
+        <button onclick="deleteBook()">Delete</button>
         </div>
         <script src="./book_system.js"></script>
     </body>

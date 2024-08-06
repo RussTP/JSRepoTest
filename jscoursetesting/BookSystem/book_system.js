@@ -16,7 +16,9 @@ function addBook(){
         clearInputs();
     } else {
         alert('Please fill in all fields correctly.');
+       
     }
+    document.getElementById('deleteBtn').style.display = 'block';
 }
 
 function showbooks(){
@@ -29,9 +31,22 @@ function showbooks(){
     document.getElementById('books').innerHTML = booksDiv.join('');
     }
 
+
+
+    function deleteBook(index) {
+        books.splice(index, 1);
+        showbooks();
+        if (books <= 0) {
+            document.getElementById('deleteBtn').style.display = 'none';
+            }
+    }
+    
+
 function clearInputs() {
     document.getElementById('bookName').value = '';
     document.getElementById('authorName').value = '';
     document.getElementById('bookDescription').value = '';
     document.getElementById('pagesNumber').value = '';
 }
+
+
